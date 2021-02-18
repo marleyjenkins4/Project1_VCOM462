@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="css/timer.css">
+</head>
+<body>
+    <div class="wrap">
+
+        <div id="timer">
+                
+                <svg width="260" height="260">
+                    <circle class="defaultCircle" cx="125" cy="125"r="120" stroke="#ff88fb"
+                    stroke-width="10" fill="none" stroke-linecap="round"/>
+                </svg>
+                <span id="hour"> 00</span>:
+                <span id="minute"> 00 </span>:
+                <span id="second"> 00</span> :
+                <span id="millisecond"> 00</span>
+    
+        </div>
+
+        <p>Your time starts name</p>
+
+        <div class="option">
+            <a id="play" href="javascript:void(0)"><i class="fa fa-play"></i></a>
+            <a id="stop" href="javascript:void(0)"><i class="fa fa-stop"></i>Stop</a>
+            <a id="reset" href="javascript:void(0)"><i class="fa fa-undo"></i></a>
+        </div>
+        
+    </div>
+    <script>
+        var base; 
+        var playPause=0;
+        function playfunc(){
+            playPause= playPause +1;
+
+            if(playPause === 1)
+            {
+                document.getElementById("play").classlist.add("pause");
+            }
+            else if(playPause === 2 )
+            {   
+                document.getElementById("play").classlist.remove("pause");
+                playPause = 0;
+                stop();
+            }
+        }
+        function play(){
+            base= setInterval (timer, 10);
+            clearInterval()
+        }
+        function stop(){
+
+        }
+
+        //DEFAULT VALUE 
+        var millisecond = 0;
+        var second = 0;
+        var minute = 0;
+        var hour = 0;
+        //RETURN VALUE
+        var millisecondVal = 0;
+        var secondVal = 0;
+        var minuteVal = 0;
+        var hourVal = 0;
+    
+        function timer(){
+
+        }
+
+        //this function updates the time every millisecond
+        function updateTime(i){
+            if(i < 10){
+                i="0" + i;
+
+            }
+            return i;
+        }
+    </script>
+</body>
+</html>

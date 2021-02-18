@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="css/home.css">
+</head>
+<body>
+</div>
+<div class="button_container" id="toggle"><span class="top"></span><span class="middle"></span><span class="bottom"></span></div>
+<div class="overlay" id="overlay">
+    <nav class="overlay-menu">
+        <ul>
+            <img src="./images/logo.svg"> 
+            <li><a href= "home.html"> HOME </a></li>
+            <li><a href= "stopwatch.html"> STOPWATCH </a></li>
+            <li><a href= "edittimes.html"> EDIT TIMES</a></li>
+            <li><a href= "timelog.html"> TIME LOG</a></li>
+            <li><a href= "reminder.html"> SET REMINDER</a></li>
+        </ul>
+    </nav>
+</div>
+<!--- https://www.studytonight.com/apache-cordova/connection-with-backened#-->
+<section class= "welcome">
+    <h1> WELCOME. </h1>
+    <p>What is your Name?</p>
+</section>
+
+
+
+<img src="/images/timer.svg">
+
+<script type=”text/javascript”>
+    $(document).ready(function(){
+        $(“#sub”).click(function(){
+        var firstname = $(“#firstname”).val();
+        var lastname = $(“#lastname”).val();
+        if($.trim(firstname).length >0 & $.trim(lastname).length >0) {
+            $.ajax({
+                type:”POST”,  //Request type
+                url: “http://localhost/firstname.php”,   
+                data:{firstname:firstname, lastname:lastname},
+                cache:false,
+                success:function(data) {
+                    alert(data);
+                }
+            })
+        } 
+        else {
+            alert(‘Input fields are empty’);
+        }
+    })
+})
+</script>
+
+
+    <input text="text" placeholder="enter your name" id="name"> 
+    <button id= "sub"> Submit</button>
+
+
+
+<p id="cool">TIME LOG</p>
+
+<div class="arrow bounce" id="arrows">
+
+<a href= "edittimes.html"><img src="/images/chevron_down.svg"></a>
+</div>
+
+
+</body>
+</html>

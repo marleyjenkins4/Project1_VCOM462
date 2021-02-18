@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="css/home.css">
+</head>
+<body>
+</div>
+<div class="button_container" id="toggle"><span class="top"></span><span class="middle"></span><span class="bottom"></span></div>
+<div class="overlay" id="overlay">
+    <nav class="overlay-menu">
+        <ul>
+            <img src="./images/logo.svg"> 
+            <li><a href= "home.html"> HOME </a></li>
+            <li><a href= "stopwatch.html"> STOPWATCH </a></li>
+            <li><a href= "edittimes.html"> EDIT TIMES</a></li>
+            <li><a href= "timelog.html"> TIME LOG</a></li>
+            <li><a href= "reminder.html"> SET REMINDER</a></li>
+        </ul>
+    </nav>
+</div>
+
+<script>
+    $('#toggle').click(function() {
+   $(this).toggleClass('active');
+   $('#overlay').toggleClass('open');
+  });
+</script>
+    <img src="./images/logo-2.svg"> 
+</body>
+</html>
