@@ -6,7 +6,6 @@
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="css/home.css">
-<link rel="stylesheet" href="css/reset.css">
 </head>
 <body>
 
@@ -17,6 +16,7 @@
     <nav class="overlay-menu">
       <img src="./images/logo.svg"> 
         <ul>
+        
             <li><a href= "home.html"> HOME </a></li>
             <li><a href= "stopwatch.html"> STOPWATCH </a></li>
             <li><a href= "edittimes.html"> EDIT TIMES</a></li>
@@ -25,6 +25,9 @@
         </ul>
     </nav>
 </div>
+
+
+
 <script>
     $('#toggle').click(function() {
    $(this).toggleClass('active');
@@ -80,11 +83,14 @@ function render() {
 </script>
 
 
-<img src="./images/logo-2.svg" class="logo">  
-<img src="./images/circle.svg" id="circle" width= "364px" height= "367px"> 
- <div class="start_button">  
- <a href="#" id="start" class="" onclick="startStopwatch()">START</a>&nbsp;
-</div> 
+<img src="./images/logo-2.svg" class="logo"> 
+<img src="./images/circle.svg" id="circle" "> 
+ 
+
+
+
+
+
   <script>
   $('#show').on('click', function () {
     $('.center').show();
@@ -98,6 +104,12 @@ $('#close').on('click', function () {
 
   </script>
 
+
+
+<div class="start_button">  
+  <a href="#" id="starts" class="" onclick="startStopwatch()">START</a>&nbsp;
+ </div> 
+ 
 <div class="stop_button">  
     <a href="#" id="show" onclick="stopStopwatch()">STOP</a>&nbsp;
   </div>
@@ -111,6 +123,16 @@ $('#close').on('click', function () {
     <span id="s_seconds">00</span>:
     <span id="s_ms">000</span>
     </section>
+
+
   </fieldset>
+
+
+  <p id="cool">TIME LOG</p>
+
+<div class="arrow bounce" id="arrows">
+
+<a href= "edittimes.html"><img src="/images/chevron_down.svg"></a>
+</div>
 </body>
 </html>
