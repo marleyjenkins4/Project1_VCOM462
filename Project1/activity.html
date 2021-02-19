@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="css/home.css">
+<link rel="stylesheet" href="css/reset.css">
+</head>
+
+<body>
+        <div>
+        <div class="button_container" id="toggle"><span class="top"></span><span class="middle"></span><span class="bottom"></span></div>
+        <div class="overlay" id="overlay">
+            <nav class="overlay-menu">
+                <img src="./images/logo.svg">
+                <ul>
+                    <li><a href= "home.html"> HOME </a></li>
+                    <li><a href= "stopwatch.html"> STOPWATCH </a></li>
+                    <li><a href= "edittimes.html"> EDIT TIMES</a></li>
+                    <li><a href= "timelog.html"> TIME LOG</a></li>
+                    <li><a href= "reminder.html"> SET REMINDER</a></li>
+                </ul>
+            </nav>
+        </div>
+        </div>
+
+        <img src="./images/logo-2.svg" class="logo">
+
+
+        <script>
+            $('#toggle').click(function() {
+           $(this).toggleClass('active');
+           $('#overlay').toggleClass('open');
+          });
+        </script>
+
+
+      <div class="activity">
+          <h2>SELECT THE ACTIVITY  YOU WANT TO COMPLETE.</h2>
+        <section class="activity_options">
+            <option value="work" id="work">WORK</option>
+            <option value="grading" id="grading"> GRADING </option>
+            <option value="zoom/lecture" id="zoom"> ZOOM / LECTURE </option>
+            <option value="time-off" id="time-off"> TIME-OFF</option>
+            <option value="meetings" id="meetings">MEETINGS</option>
+            <img src= "./images/lines.svg" id="lines">
+
+            <input type="submit" value="ENTER" id= "redirect_activity">
+        </section>
+      </div>
+
+
+
+
+</body>
+</html>
