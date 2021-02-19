@@ -6,14 +6,15 @@
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="css/home.css">
+<link rel="stylesheet" href="css/reset.css">
 </head>
 <body>
-</div>
+<div>
 <div class="button_container" id="toggle"><span class="top"></span><span class="middle"></span><span class="bottom"></span></div>
 <div class="overlay" id="overlay">
     <nav class="overlay-menu">
+        <img src="./images/logo.svg"> 
         <ul>
-            <img src="./images/logo.svg"> 
             <li><a href= "home.html"> HOME </a></li>
             <li><a href= "stopwatch.html"> STOPWATCH </a></li>
             <li><a href= "edittimes.html"> EDIT TIMES</a></li>
@@ -31,15 +32,17 @@
    $('#overlay').toggleClass('open');
   });
 </script>
-<img src="./images/logo-2.svg"> 
+<img src="./images/logo-2.svg" class="logo"> 
+<img src="./images/timer.svg" id="timer-img-home"> 
 <section class= "welcome">
     <h1> WELCOME. </h1>
+    <h2> USER </h2>
      <!--GET FROM FORM -->
 </section>
 <section class= "button">
     <div class="sw_button">
-    <button id="stopwatchButton"> START STOPWATCH</button>
-</div>
+        <button id="stopwatchButton"> START STOPWATCH</button>
+    </div>
     <script type="text/javascript">
         document.getElementById("stopwatchButton").onclick = function () {
             location.href = "stopwatch.html";

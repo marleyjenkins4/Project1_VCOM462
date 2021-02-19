@@ -6,14 +6,15 @@
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="css/home.css">
+<link rel="stylesheet" href="css/reset.css">
 </head>
 <body>
 </div>
 <div class="button_container" id="toggle"><span class="top"></span><span class="middle"></span><span class="bottom"></span></div>
 <div class="overlay" id="overlay">
     <nav class="overlay-menu">
+        <img src="./images/logo.svg"> 
         <ul>
-            <img src="./images/logo.svg"> 
             <li><a href= "home.html"> HOME </a></li>
             <li><a href= "stopwatch.html"> STOPWATCH </a></li>
             <li><a href= "edittimes.html"> EDIT TIMES</a></li>
@@ -28,6 +29,19 @@
    $('#overlay').toggleClass('open');
   });
 </script>
-    <img src="./images/logo-2.svg"> 
+    <img src="./images/logo-2.svg" class="logo"> 
+    <div class="edit-times">
+        <h1>EDIT TIME</h1>
+        <h2>WORK</h2>
+        <img src="./images/timer.svg"> 
+        <h3>0:00:00</h2>
+        <form action="/action_page.php" id="edit-time-form">
+            <label for="start" id="start-label">EDIT THE START TIME:</label><br>
+            <input type="time" id="start" name="start" value="ENTER A TIME"><br>
+            <label for="stop" id="stop-label">EDIT THE STOP TIME:</label><br>
+            <input type="time" id="stop" name="stop" value="ENTER A TIME"><br><br>
+            <input type="submit" value="Submit" id="submit">
+        </form> 
+    </div>
 </body>
 </html>
